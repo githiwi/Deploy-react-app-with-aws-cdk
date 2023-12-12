@@ -1,5 +1,5 @@
 import React from "react";
-import {Movie,Card} from "../models";
+import {Movie} from "../models";
 import movieSchedules from "../../movieSchedules";
 import MovieCard from "../card/MovieCard";
 const Movies:React.FC = ()=>{

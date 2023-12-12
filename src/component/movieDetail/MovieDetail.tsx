@@ -10,7 +10,7 @@ interface MovieCardProps {
 const MovieDetail:React.FC<MovieCardProps> = ({movie})=>{
     return (
         <div>
-            <h3>Show time in the following cinemas</h3>
+            <h3>Movie available in the following cinemas</h3>
             <ul className="cinema-list">
                 {movie.cinemas.map((cinema:Cinema)=>(
                     <li key={cinema.name} className="cinema-item">{cinema.name}</li>

@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import "./card.css"
-import {Movie,Cinema} from "../models";
+import {Movie} from "../models";
 import MovieDetail from "../movieDetail/MovieDetail";
 
 interface MovieCardProps {
@@ -14,11 +14,10 @@ const MovieCard:React.FC<MovieCardProps> = ({movie})=>{
     }
     return (
         <div className="movie-card">
-            <div>{movie.title}</div>
+            <div className= "title">{movie.title}</div>
             <img onClick={handleClick} src={movie.poster} alt={movie.title} className="movie-poster"/>
             <div>
                 {visibleDetails? <MovieDetail movie={movie}/>: ""}
-
             </div>
         </div>
     )

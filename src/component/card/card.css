@@ -30,6 +30,7 @@
     width: 300px;
     height: 500px;
     text-align: center;
+
 }
 
 .movie-poster {
@@ -37,6 +38,12 @@
     max-height: 300px;
     object-fit: cover;
     margin-bottom: 12px;
+}
+
+.App {
+    justify-content: center;
+    text-align: center;
+
 }
 
 .cinema-list {
