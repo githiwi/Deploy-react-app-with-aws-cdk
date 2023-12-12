@@ -1,23 +1,12 @@
-interface MovieData {
-    movies : Movie[]
-}
-interface Movie {
-    title : string
-    poster : string
-    cinemas : Cinema[]
-}
-interface Cinema {
-    name : string
-    location : string
-    showtimes : string[]
+import {MovieData,Cinema,Movie} from "./component/models";
 
-}
 const MovieSchedules : MovieData = {
 
     "movies": [
     {
+        "id":1,
         "title": "The Shawshank Redemption",
-        "poster": "https://example.com/posters/shawshank_redemption.jpg",
+        "poster": "https://m.media-amazon.com/images/I/61JNdNKQyIL._AC_UF894,1000_QL80_.jpg",
         "cinemas": [
             {
                 "name": "City Cinemas",
@@ -37,8 +26,9 @@ const MovieSchedules : MovieData = {
         ]
     },
     {
+        "id":2,
         "title": "The Godfather",
-        "poster": "https://example.com/posters/the_godfather.jpg",
+        "poster": "https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg",
         "cinemas": [
             {
                 "name": "City Cinemas",
@@ -53,8 +43,9 @@ const MovieSchedules : MovieData = {
         ]
     },
     {
+        "id":3,
         "title": "Pulp Fiction",
-        "poster": "https://example.com/posters/pulp_fiction.jpg",
+        "poster": "https://c8.alamy.com/comp/EJWNYT/pulp-fiction-movie-poster-EJWNYT.jpg",
         "cinemas": [
             {
                 "name": "Starplex Cinemas",
@@ -69,8 +60,9 @@ const MovieSchedules : MovieData = {
         ]
     },
     {
+        "id":4,
         "title": "The Dark Knight",
-        "poster": "https://example.com/posters/the_dark_knight.jpg",
+        "poster": "https://images4.alphacoders.com/573/57394.jpg",
         "cinemas": [
             {
                 "name": "City Cinemas",
@@ -85,8 +77,9 @@ const MovieSchedules : MovieData = {
         ]
     },
     {
+        "id":5,
         "title": "Inception",
-        "poster": "https://example.com/posters/inception.jpg",
+        "poster": "https://m.media-amazon.com/images/M/MV5BMjExMjkwNTQ0Nl5BMl5BanBnXkFtZTcwNTY0OTk1Mw@@._V1_.jpg",
         "cinemas": [
             {
                 "name": "Mega Movies",
