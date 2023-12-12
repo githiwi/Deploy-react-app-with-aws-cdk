@@ -1,24 +1,24 @@
-import React from "react";
+import React, {useState} from "react";
 import "./card.css"
 import {Movie,Cinema} from "../models";
+import MovieDetail from "../movieDetail/MovieDetail";
 
 interface MovieCardProps {
     movie:Movie
 }
 
 const MovieCard:React.FC<MovieCardProps> = ({movie})=>{
-
+    const [visibleDetails, setVisibleDetails] = useState(false)
+    const handleClick = (event: React.MouseEvent<HTMLElement>) =>{
+        setVisibleDetails(!visibleDetails)
+    }
     return (
         <div className="movie-card">
             <div>{movie.title}</div>
-            <img src={movie.poster} alt={movie.title} className="movie-poster"/>
+            <img onClick={handleClick} src={movie.poster} alt={movie.title} className="movie-poster"/>
             <div>
-                <h3>Show time in the following cinemas</h3>
-                <ul className="cinema-list">
-                {movie.cinemas.map((cinema:Cinema)=>(
-                    <li key={cinema.name} className="cinema-item">{cinema.name}</li>
-                ))}
-                </ul>
+                {visibleDetails? <MovieDetail movie={movie}/>: ""}
+
             </div>
         </div>
     )

@@ -1,5 +1,5 @@
 import React from "react";
-import "./card.css"
+import "../card/card.css"
 import {Movie,Cinema} from "../models";
 
 
